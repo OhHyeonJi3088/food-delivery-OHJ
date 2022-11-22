@@ -1,10 +1,10 @@
 # food-delivery-OHJ
 
-[이벤트 스토밍]
+# 이벤트 스토밍
 
 ![image](https://user-images.githubusercontent.com/91641815/203244063-cdace5b5-f4b3-406f-8ab5-47569c056667.png)
 
-[기능적 요구사항]
+# 기능적 요구사항
 1. 고객이 메뉴를 선택하여 주문한다.
 2. 고객이 선택한 메뉴에 대해 결제한다.
 3. 주문이 되면 주문 내역이 입점상점주인에게 주문정보가 전달된다
@@ -17,18 +17,18 @@
 10. 주문상태가 바뀔 때 마다 카톡으로 알림을 보낸다
 11. 고객이 요리를 배달 받으면 배송확인 버튼을 탭하여, 모든 거래가 완료된다
 
-[추가된 2가지 기능]
+# 추가된 2가지 기능
 1. 상점주는 쿠폰을 발행해 고객에게 카톡으로 알림을 보낸다
 2. 상점주는 주문수락때와 거절 시점에 시스템에 상태를 입력한다
 
-[Saga(Pub/Sub)]
+# Saga(Pub/Sub)
 
-[CQRS]
+# CQRS
 
-[Compensataion/Correlation]
+# Compensataion/Correlation
 
-[Request/Response]
+# Request/Response
 
-[Circuit Breaker]
+# Circuit Breaker
 
-[Gateway/Ingress]
+# Gateway/Ingress
