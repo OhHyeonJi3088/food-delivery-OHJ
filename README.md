@@ -22,6 +22,9 @@
 2. 상점주는 주문수락때와 거절 시점에 시스템에 상태를 입력한다
 
 # Saga(Pub/Sub)
+![image](https://user-images.githubusercontent.com/91641815/203246773-d06bc2f4-4e14-45b7-b840-a855ce3f7c0f.png)
+
+
 
 # CQRS
 
