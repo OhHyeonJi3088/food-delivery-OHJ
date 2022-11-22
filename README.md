@@ -53,7 +53,19 @@ public void whenOrderPlaced_then_CREATE_1(
 
 # Compensataion/Correlation
 ```java
-
+@StreamListener(value = KafkaProcessor.INPUT, condition = "headers['type']=='OrderCancelled'")
+    public void wheneverOrderCancelled_IncreaseFood(@Payload OrderCancelled orderCancelled) {
+        OrderCancelled event = orderCancelled;
+        Food.increaseFood(event);
+    }
+    
+    
+    public static void increaseFood(OrderCancelled orderCancelled) {
+        FoodRepository().findById(Long.valueOf(orderCancelled.getFoodId())).ifPresent(stock->{
+            Food.setFood(stock.getFood()++);
+            FoodRepository().save(Food);
+        });
+    }
 ```
 
 # Request/Response
