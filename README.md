@@ -30,10 +30,31 @@
 ![image](https://user-images.githubusercontent.com/91641815/203252269-ace7a3de-4ee7-46c4-8daf-928ce5aeb2d6.png)
 
 # CQRS
+```java
+// 주문이 들어오면 주문리스트 대시보드(View) Repo에 INSERT 
+@StreamListener(KafkaProcessor.INPUT)
+public void whenOrderPlaced_then_CREATE_1(
+    @Payload OrderPlaced orderPlaced
+) {
+    try {
+        if (!orderPlaced.validate()) return;
 
+        // view 객체 생성
+        OrderList orderList = new OrderList();
+        // view 객체에 이벤트의 Value 를 set 함
+        orderList.setOrderId(orderPlaced.getOrderId());
+        // view 레파지 토리에 save
+        orderListRepository.save(orderList);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}
+```
 
 # Compensataion/Correlation
+```java
 
+```
 
 # Request/Response
 ![image](https://user-images.githubusercontent.com/91641815/203259097-c7fbe7eb-1748-47b8-89c9-45df42dc998a.png)
