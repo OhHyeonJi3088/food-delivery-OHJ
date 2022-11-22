@@ -67,15 +67,15 @@ public class Delivery  {
         */
 
         /** Example 2:  finding and process
-        
-        repository().findById(cooked.get???()).ifPresent(delivery->{
+        */
+        repository().findById(cooked.getId()).ifPresent(delivery->{
             
-            delivery // do something
+            delivery.orderId = cooked.getOrderId(); // do something
             repository().save(delivery);
 
 
          });
-        */
+        
 
         
     }

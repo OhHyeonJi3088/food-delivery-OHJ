@@ -109,15 +109,15 @@ public class Order  {
         */
 
         /** Example 2:  finding and process
-        
-        repository().findById(rejected.get???()).ifPresent(order->{
+        */
+        repository().findById(rejected.getId()).ifPresent(order->{
             
-            order // do something
+            order.status = "order.rejected"; // do something
             repository().save(order);
 
 
          });
-        */
+        
 
         
     }
@@ -130,15 +130,15 @@ public class Order  {
         */
 
         /** Example 2:  finding and process
-        
-        repository().findById(accepted.get???()).ifPresent(order->{
+        */
+        repository().findById(accepted.getId()).ifPresent(order->{
             
-            order // do something
+            order.status = "order.accepted"; // do something
             repository().save(order);
 
 
          });
-        */
+        
 
         
     }
@@ -151,15 +151,15 @@ public class Order  {
         */
 
         /** Example 2:  finding and process
-        
-        repository().findById(rejected.get???()).ifPresent(order->{
+        */
+        repository().findById(rejected.getId()).ifPresent(order->{
             
-            order // do something
+            order.status = "order.rejected"; // do something
             repository().save(order);
 
 
          });
-        */
+        
 
         
     }
@@ -172,15 +172,15 @@ public class Order  {
         */
 
         /** Example 2:  finding and process
-        
-        repository().findById(started.get???()).ifPresent(order->{
+        */
+        repository().findById(started.getId()).ifPresent(order->{
             
-            order // do something
+            order.status = "cooking.started"; // do something
             repository().save(order);
 
 
          });
-        */
+        
 
         
     }
