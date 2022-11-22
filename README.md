@@ -39,7 +39,20 @@
 
 
 # Circuit Breaker
-
+```java
+server:
+  port: 8080
+feign:
+  hystrix:
+    enabled: true
+hystrix:
+  command:
+     default:
+      execution.isolation.thread.timeoutInMilliseconds: 2000
+spring:
+  application:
+    name: app
+```
 
 # Gateway/Ingress
 ![image](https://user-images.githubusercontent.com/91641815/203247906-b205c254-6528-4e70-af85-f6c063833e08.png)
