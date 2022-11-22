@@ -75,7 +75,7 @@ public void whenOrderPlaced_then_CREATE_1(
 # Circuit Breaker
 ```java
 server:
-  port: 8080
+  port: 8088
 feign:
   hystrix:
     enabled: true
