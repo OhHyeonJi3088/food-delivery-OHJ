@@ -28,10 +28,15 @@
 
 # CQRS
 
+
 # Compensataion/Correlation
+
 
 # Request/Response
 
+
 # Circuit Breaker
 
+
 # Gateway/Ingress
+![image](https://user-images.githubusercontent.com/91641815/203247906-b205c254-6528-4e70-af85-f6c063833e08.png)
